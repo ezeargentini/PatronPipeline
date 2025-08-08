@@ -43,24 +43,37 @@ Recibe un objeto `Pedido` vía HTTP POST y lo somete a una serie de validaciones
 
 ```bash
 ./mvnw spring-boot:run
+```
 
 Opciones para probarlo:
 🧪 Opción A: Usar curl en la terminal
 
+```bash
 curl -X POST http://localhost:8080/pedidos \
   -H "Content-Type: application/json" \
   -d '{"cliente":"Ana López", "productos":["Teclado", "Mouse"], "montoTotal":2500}'
+```
 
 🧪 Opción B: Usar Postman o Insomnia
 Método: POST
 
+```bash
 URL: http://localhost:8080/pedidos
+```
 
 Body: raw JSON (application/json)
 
+```json
 {
   "cliente": "Ana López",
   "productos": ["Teclado", "Mouse"],
   "montoTotal": 2500
 }
+```
 
+📚 ¿Por qué usar este patrón?
+Permite agregar o quitar validaciones fácilmente.
+
+Cada validador está desacoplado.
+
+Mejora la mantenibilidad del código.

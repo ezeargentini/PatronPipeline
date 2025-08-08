@@ -1,13 +1,6 @@
-📚 ¿Por qué usar este patrón?
-Permite agregar o quitar validaciones fácilmente.
-
-Cada validador está desacoplado.
-
-Mejora la mantenibilidad del código.
 
 ---
 
-```markdown
 # ✅ Consigna: Procesamiento de Pedidos con el Patrón Pipeline (Java + Spring Boot)
 
 ## 🎯 Objetivo
@@ -34,6 +27,7 @@ Tu aplicación debe exponer un **endpoint POST** que reciba un objeto `Pedido` c
   "productos": ["string"],
   "montoTotal": number
 }
+```
 
 Y validar lo siguiente:
 
@@ -42,6 +36,7 @@ Y validar lo siguiente:
 ✅ El monto total debe ser mayor a 0.
 
 🏗 Estructura del proyecto
+```css
 ├── src/
 │   ├── main/
 │   │   ├── java/com/example/pipeline_pedidos/
@@ -56,6 +51,7 @@ Y validar lo siguiente:
 │   │   │   └── PipelinePedidosApplication.java
 ├── pom.xml
 └── README.md
+```
 
 🛠️ Requisitos técnicos
 Usar Java 17+.
@@ -74,19 +70,25 @@ POST /pedidos
 Content-Type: application/json
 
 Body:
+```json
 {
   "cliente": "Ana López",
   "productos": ["Teclado", "Mouse"],
   "montoTotal": 2500
 }
+```
 Respuesta esperada (200 OK):
+```json
 {
   "mensaje": "Pedido validado correctamente"
 }
+```
 Si alguna validación falla (Ej: montoTotal <= 0), debe responder con 400 Bad Request y un mensaje como:
+```json
 {
   "error": "El monto total debe ser mayor a 0"
 }
+```
 
 🧩 Extra (opcional)
 Agregar validaciones como límite máximo de productos o monto máximo permitido.
