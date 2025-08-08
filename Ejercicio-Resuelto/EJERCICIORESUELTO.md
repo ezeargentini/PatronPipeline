@@ -1,12 +1,13 @@
-🛒 Procesamiento de Pedidos con Patrón Pipeline (Java + Spring Boot)
+```markdown
+# 🛒 Procesamiento de Pedidos con Patrón Pipeline (Java + Spring Boot)
 
-Este repositorio está organizado para ayudarte a comprender y aplicar el patrón de diseño **Pipeline (o Chain of Responsibility)** en un proyecto Java con Spring Boot.
+Este repositorio está organizado para ayudarte a comprender y aplicar el **patrón de diseño Pipeline (o Chain of Responsibility)** en un proyecto Java con Spring Boot.
 
 🔹 La carpeta `CONSIGNA` contiene la descripción del ejercicio propuesto.  
 🔹 La carpeta `EJERCICIO RESUELTO` incluye la solución implementada usando Spring Boot.  
 🔹 El archivo `README.md` (este archivo) explica el funcionamiento del proyecto, cómo ejecutarlo y los conceptos detrás del patrón utilizado.
 
-Este proyecto demuestra cómo aplicar el patrón Pipeline para procesar pedidos en una API REST, validando su contenido antes de confirmarlos.
+Este proyecto demuestra cómo aplicar el patrón Pipeline para validar pedidos en una API REST.
 
 ---
 
@@ -58,9 +59,9 @@ URL: http://localhost:8080/pedidos
 
 Body: raw JSON (application/json)
 
+```json
 {
   "cliente": "Ana López",
   "productos": ["Teclado", "Mouse"],
   "montoTotal": 2500
 }
-

@@ -7,6 +7,7 @@ Mejora la mantenibilidad del código.
 
 ---
 
+```markdown
 # ✅ Consigna: Procesamiento de Pedidos con el Patrón Pipeline (Java + Spring Boot)
 
 ## 🎯 Objetivo
@@ -27,6 +28,7 @@ Es ideal para desacoplar reglas de negocio y mejorar la extensibilidad del códi
 
 Tu aplicación debe exponer un **endpoint POST** que reciba un objeto `Pedido` con los siguientes campos:
 
+```json
 {
   "cliente": "string",
   "productos": ["string"],
@@ -54,6 +56,7 @@ Y validar lo siguiente:
 │   │   │   └── PipelinePedidosApplication.java
 ├── pom.xml
 └── README.md
+
 🛠️ Requisitos técnicos
 Usar Java 17+.
 
@@ -71,22 +74,20 @@ POST /pedidos
 Content-Type: application/json
 
 Body:
-
 {
   "cliente": "Ana López",
   "productos": ["Teclado", "Mouse"],
   "montoTotal": 2500
 }
 Respuesta esperada (200 OK):
-
 {
   "mensaje": "Pedido validado correctamente"
 }
 Si alguna validación falla (Ej: montoTotal <= 0), debe responder con 400 Bad Request y un mensaje como:
-
 {
   "error": "El monto total debe ser mayor a 0"
 }
+
 🧩 Extra (opcional)
 Agregar validaciones como límite máximo de productos o monto máximo permitido.
 
