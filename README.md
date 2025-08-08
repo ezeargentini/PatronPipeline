@@ -51,7 +51,7 @@ Opciones para probarlo:
 ```bash
 curl -X POST http://localhost:8080/pedidos \
   -H "Content-Type: application/json" \
-  -d '{"cliente":"Ana López", "productos":["Teclado", "Mouse"], "montoTotal":2500}'
+  -d '{"cliente":"Ezequiel ARgentini", "productos":["Monitor", "Mouse"], "montoTotal":250000}'
 ```
 
 🧪 Opción B: Usar Postman o Insomnia
@@ -65,9 +65,9 @@ Body: raw JSON (application/json)
 
 ```json
 {
-  "cliente": "Ana López",
-  "productos": ["Teclado", "Mouse"],
-  "montoTotal": 2500
+  "cliente": "Ezequiel Argentini",
+  "productos": ["Monitor", "Mouse"],
+  "montoTotal": 250000
 }
 ```
 

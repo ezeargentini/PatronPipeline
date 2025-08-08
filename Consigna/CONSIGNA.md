@@ -19,13 +19,13 @@ Es ideal para desacoplar reglas de negocio y mejorar la extensibilidad del códi
 
 ## 🧪 Requisitos funcionales
 
-Tu aplicación debe exponer un **endpoint POST** que reciba un objeto `Pedido` con los siguientes campos:
+Tu aplicación debe exponer un **endpoint POST** que reciba un objeto `Pedido` con los siguientes campos, entiendase "number" como number(tipo primitivo numerico):
 
 ```json
 {
   "cliente": "string",
   "productos": ["string"],
-  "montoTotal": number
+  "montoTotal": "number"
 }
 ```
 
@@ -72,9 +72,9 @@ Content-Type: application/json
 Body:
 ```json
 {
-  "cliente": "Ana López",
-  "productos": ["Teclado", "Mouse"],
-  "montoTotal": 2500
+  "cliente": "Ezequiel Argentini",
+  "productos": ["Monitor", "Mouse"],
+  "montoTotal": 250000
 }
 ```
 Respuesta esperada (200 OK):
